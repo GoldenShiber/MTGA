@@ -5,8 +5,8 @@ import java.util.HashMap;
 public class CombatStats extends BasicStats{
 
 	/*
-	 * The idea of the combat stats is to determine the amount of combat points
-	 * a character can use based on a their base combat stats and skills involved in combat.
+	 * The idea of the combat level is to determine the amount of combat points
+	 * a character can use based on a their base combat level and skills involved in combat.
 	 */
 	private final HashMap<String, Integer> combatSkills = new HashMap<String, Integer>();
 	

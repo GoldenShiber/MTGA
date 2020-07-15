@@ -1,6 +1,6 @@
 package Utils;
 
-import character.TrudvangCharacter;
+import main.character.TrudvangCharacter;
 
 /*
  * Most functions modifying a combat or civil skill check

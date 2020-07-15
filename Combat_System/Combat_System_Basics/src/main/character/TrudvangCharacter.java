@@ -1,5 +1,9 @@
 package main.character;
 
+import java.util.HashMap;
+
+import stats.CombatAbilites;
+
 /*
  * The base of a character is their id(name), health, initiative and raud.
  * In the prototype, the initiative modifiers are hard coded, 
@@ -13,6 +17,7 @@ public class TrudvangCharacter {
 	public int initative;
 	public int initiativeModifier = 0;
 	public int raud;
+	public CombatAbilites combatSkills;
 	
 	public TrudvangCharacter() {
 		this.name = "";
@@ -20,14 +25,16 @@ public class TrudvangCharacter {
 		this.initative = 0;
 		this.initiativeModifier = 0;
 		this.raud = 0;
+		this.combatSkills = new CombatAbilites(new HashMap<String, Integer>());
 	}
 	
-	public TrudvangCharacter(String name, int health, int initiative, int initiativeModifier, int raud) {
+	public TrudvangCharacter(String name, int health, int initiative, int initiativeModifier, int raud, HashMap<String, Integer> combatSet) {
 		this.name = name;
 		this.health = health;
 		this.initative = initiative;
 		this.initiativeModifier = initiativeModifier;
 		this.raud = raud;
+		this.combatSkills = new CombatAbilites(combatSet);
 	}
 
 	@SuppressWarnings("unused")
