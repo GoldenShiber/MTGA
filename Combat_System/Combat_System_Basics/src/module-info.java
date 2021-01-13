@@ -3,5 +3,5 @@ module combat_System_Basics {
 	requires org.junit.jupiter.api;
 	requires jdk.compiler;
 	requires java.desktop;
-//	requires miglayout;
+	requires json.simple;
 }

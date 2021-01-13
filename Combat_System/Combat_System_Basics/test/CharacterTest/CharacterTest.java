@@ -8,10 +8,8 @@ import main.character.TrudvangCharacter;
 
 import org.junit.jupiter.api.Test;
 
-class characterTest {
+class CharacterTest {
 
-	
-	
 	@Test
 	void characterTest() {
 		TrudvangCharacter testCharacter = new TrudvangCharacter("John", 10, 10, 5, 5, new HashMap<String, Integer>());

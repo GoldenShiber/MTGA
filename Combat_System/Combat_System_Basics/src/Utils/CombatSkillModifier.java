@@ -6,6 +6,7 @@ package Utils;
 
 public enum CombatSkillModifier {
 	
+	KAMPVANA, STRIDSVANA, VAPENSKILL
 	/*
 	 * Kampana = 2fv per skill level
 	 * Stridsvana = 1 fv per skill level per hand ( 2fv om 2handat )
