@@ -12,7 +12,7 @@ public class statUtilities {
 
 	public int calculateInitiative(TrudvangCharacter character) {
 		int initiative = 0;
-		initiative = (int) Math.random()*10 + character.initiativeModifier -1;
+		initiative = (int) Math.random()*10 + character.statMap.get("initialModifier") -1;
 		return initiative;
 	}
 }

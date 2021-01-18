@@ -13,7 +13,6 @@ import org.json.simple.JSONObject;
  *  and a JSON database is most likely very easy to use in this case.
  */
 
-import Utils.JSONUtilities;
 
 public class BasicJson {
 
@@ -28,31 +27,42 @@ public class BasicJson {
 	      JSONObject obj = new JSONObject();
 
 	      ArrayList<String> nameList = new ArrayList<>();
-	      HashMap<String, ArrayList<String>> skillList = new HashMap<>();
+	      HashMap<String, JSONArray> skillList = new HashMap<>();
 	      
 	      nameList.add("Peter");
 	      nameList.add("Hycklare");
 	      
-	      ArrayList<String> testList = new ArrayList<>();
-	      testList.add("skill 1");
-	      testList.add("skill 2");
-	      testList.add("skill 3");
+	      JSONArray list1 = new JSONArray();
+//	      list1.add("skill 1");
+//	      list1.add("skill 2");
+//	      list1.add("skill 3");
 	      
-	      skillList.put("Peter", testList);
+	      skillList.put("Peter", list1);
 	      
-	      ArrayList<String> testList2 = new ArrayList<>();
-	      testList2.add("skill 4");
-	      testList2.add("skill 42");
+	      JSONArray list2 = new JSONArray();
+	      list2.add("skill 4");
+	      list2.add("skill 42");
 	      
-	      skillList.put("Hycklare", testList2);
+	      skillList.put("Hycklare", list2);
 	      
-	      ArrayList<String> testSkillList = new ArrayList<>();
+	      JSONArray testSkillList = new JSONArray();
 
 	      for(String name : nameList) {
 	    	  obj = new JSONObject();
 	    	  testSkillList = skillList.get(name);
 	    	  obj.put("name", name);
-	    	  obj.put("skill", JSONUtilities.listToJSONText(testSkillList));
+	    	  obj.put("raud", 0);
+	    	  obj.put("skill", testSkillList);
+	    	  obj.put("health", 42);
+	    	  obj.put("stamina", 0);
+	    	  obj.put("intelligence", 0);
+	    	  obj.put("charisma", 0);
+	    	  obj.put("perception", 0);
+	    	  obj.put("willpower", 0);
+	    	  obj.put("agility", 0);
+	    	  obj.put("strength", 0);
+
+
 	    	  value.add(obj);
 	      }
 	      

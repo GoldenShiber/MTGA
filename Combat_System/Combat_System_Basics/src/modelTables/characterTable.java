@@ -40,8 +40,8 @@ public class characterTable extends AbstractTableModel{
 		TrudvangCharacter character = characterList.get(row);
 		switch(col) {
 			case 0: return character.name;
-			case 1: return character.health;
-			case 2: return character.initative;
+			case 1: return character.statMap.get("health");
+			case 2: return character.statMap.get("initiative");
 			default: return null;
 		}
 		

@@ -1,5 +1,6 @@
 package main.character;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 import stats.CombatAbilites;
@@ -13,53 +14,29 @@ import stats.CombatAbilites;
 
 public class TrudvangCharacter {
 	public String name;
-	public int health;
-	public int initative;
-	public int initiativeModifier = 0;
-	public int raud;
 	public CombatAbilites combatSkills;
+	public HashMap<String, Integer> statMap;
+	public ArrayList<String> skillList;
 	
 	public TrudvangCharacter() {
+		statMap = new HashMap<>();
+		skillList = new ArrayList<>();
 		this.name = "";
-		this.health = 0;
-		this.initative = 0;
-		this.initiativeModifier = 0;
-		this.raud = 0;
+		statMap.put("health", 0);
+		statMap.put("initiative", 0);
+		statMap.put("initiativeModifier", 0);
+		statMap.put("raud", 0);
 		this.combatSkills = new CombatAbilites(new HashMap<String, Integer>());
 	}
 	
-	public TrudvangCharacter(String name, int health, int initiative, int initiativeModifier, int raud, HashMap<String, Integer> combatSet) {
+	public TrudvangCharacter(String name, HashMap<String, Integer> combatSet) {
+		statMap = new HashMap<>();
+		skillList = new ArrayList<>();
+		statMap.put("initiative", 0);
+		statMap.put("initiativeModifier", 0);
 		this.name = name;
-		this.health = health;
-		this.initative = initiative;
-		this.initiativeModifier = initiativeModifier;
-		this.raud = raud;
 		this.combatSkills = new CombatAbilites(combatSet);
 	}
 
-	@SuppressWarnings("unused")
-	private String getName() {
-		return name;
-	}
-	
-	@SuppressWarnings("unused")
-	private int getHealth() {
-		return health;
-	}
-	
-	@SuppressWarnings("unused")
-	private int getInitiative() {
-		return initative;
-	}
-	
-	@SuppressWarnings("unused")
-	private int getInitiativeModifier() {
-		return initiativeModifier;
-	}
-	
-	@SuppressWarnings("unused")
-	private int getRaud() {
-		return raud;
-	}
 	
 }
