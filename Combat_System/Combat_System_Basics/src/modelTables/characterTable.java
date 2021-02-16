@@ -14,7 +14,7 @@ public class characterTable extends AbstractTableModel{
 	 */
 	private static final long serialVersionUID = 1L;
 	private List<TrudvangCharacter> characterList = new ArrayList<>();
-	private String[] columns = {"Name", "Initiative", "Health"};
+	private String[] columns = {"Name", "Health", "Initiative"};
 	
 	public characterTable() {
 		super();

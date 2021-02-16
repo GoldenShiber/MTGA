@@ -3,6 +3,7 @@ package main.character;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+import maps.CombatConverter;
 import stats.CombatAbilites;
 
 /*
@@ -38,5 +39,13 @@ public class TrudvangCharacter {
 		this.combatSkills = new CombatAbilites(combatSet);
 	}
 
-	
+	public void updateValues() {
+		CombatConverter combatMap = new CombatConverter();
+		for(String skill : skillList) {
+			String[] skillData = skill.split(" ");
+			statMap.put(combatMap.getMap().get(skillData[0]).getStatName(),
+					combatMap.getMap().get(skillData[0]).getMultiPlier() * Integer.parseInt(skillData[1]));
+			
+		}
+	}
 }

@@ -21,6 +21,7 @@ public class TestParseReader {
 
         JSONParser parser = new JSONParser();
 
+        // Better taste in progress soon.
         try (Reader reader = new FileReader("/home/goldenshiber/MTGA/Combat_System/Combat_System_Basics/test.json")) {
             Object obj = parser.parse(new FileReader("/home/goldenshiber/MTGA/Combat_System/Combat_System_Basics/test.json"));
 
