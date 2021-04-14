@@ -1,7 +1,9 @@
 package forms;
 
 import java.awt.Dimension;
+import java.awt.GridLayout;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -22,6 +24,8 @@ public class AddCharacterForm {
 	
 	private JPanel infoPanel = new JPanel(new SpringLayout());
 	
+	private JPanel interfacePanel = new JPanel();
+	
 	
 	public AddCharacterForm() {
 		initComponents();
@@ -33,13 +37,20 @@ public class AddCharacterForm {
 		
 		String[] labels = {"Name", "HP"};
 		
+		interfacePanel.setLayout(new GridLayout(1, 2));
+		infoPanel = new JPanel(new GridLayout(2,2));
+		
 		for ( int i = 0; i < labels.length; i++) {
 			JLabel label = new JLabel(labels[i], JLabel.TRAILING);
-			infoPanel.add(label);
+			infoPanel.add(label, i, 0);
 			JTextField textField = new JTextField(10);
 			label.setLabelFor(textField);
-			infoPanel.add(textField);
+			infoPanel.add(textField, i, 1);
 		}
+
+		
+		interfacePanel.add(infoPanel, 0, 0);
+		interfacePanel.add(new JButton("kek"), 0, 1);
 		
 		characterForm.setSize(new Dimension(250, 100));
 		
@@ -65,9 +76,9 @@ public class AddCharacterForm {
 //		infoPanel.add(namePanel);
 //		infoPanel.add(hpPanel);
 		
-		SpringUtilities.makeCompactGrid(infoPanel, 2, 2, 6, 6, 6, 6);
+//		SpringUtilities.makeCompactGrid(infoPanel, 2, 2, 6, 6, 6, 6);
 
-		characterForm.add(infoPanel);
+		characterForm.add(interfacePanel);
 		
 		characterForm.setVisible(true);
 	}
