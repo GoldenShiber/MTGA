@@ -1,4 +1,4 @@
-package main.character;
+package characterEssentials;
 
 import java.util.HashMap;
 

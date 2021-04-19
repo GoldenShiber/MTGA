@@ -5,9 +5,9 @@ import java.util.List;
 
 import javax.swing.table.AbstractTableModel;
 
-import main.character.TrudvangCharacter;
+import characterEssentials.TrudvangCharacter;
 
-public class characterTable extends AbstractTableModel{
+public class CharacterTable extends AbstractTableModel{
 
 	/**
 	 * 
@@ -16,11 +16,11 @@ public class characterTable extends AbstractTableModel{
 	private List<TrudvangCharacter> characterList = new ArrayList<>();
 	private String[] columns = {"Name", "Health", "Initiative"};
 	
-	public characterTable() {
+	public CharacterTable() {
 		super();
 	}
 	
-	public characterTable(List<TrudvangCharacter> characters) {
+	public CharacterTable(List<TrudvangCharacter> characters) {
 		super();
 		characterList = characters;
 	}
@@ -39,9 +39,9 @@ public class characterTable extends AbstractTableModel{
 	public Object getValueAt(int row, int col) {
 		TrudvangCharacter character = characterList.get(row);
 		switch(col) {
-			case 0: return character.name;
-			case 1: return character.statMap.get("health");
-			case 2: return character.statMap.get("initiative");
+			case 0: return character.getName();
+			case 1: return character.getStatMap().get("health");
+			case 2: return character.getStatMap().get("initiative");
 			default: return null;
 		}
 		

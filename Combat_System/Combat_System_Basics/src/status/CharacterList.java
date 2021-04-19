@@ -2,7 +2,7 @@ package status;
 
 import java.util.HashMap;
 
-import main.character.TrudvangCharacter;
+import characterEssentials.TrudvangCharacter;
 
 public class CharacterList {
 
@@ -21,7 +21,7 @@ public class CharacterList {
 	}
 	
 	public void addCharacter(TrudvangCharacter character) {
-		characterList.put(character.name, character);
+		characterList.put(character.getName(), character);
 	}
 	
 	public TrudvangCharacter getCharacter(String name) {
@@ -30,6 +30,10 @@ public class CharacterList {
 	
 	public void removeCharacter(String name) {
 		characterList.remove(name);
+	}
+	
+	public HashMap<String, TrudvangCharacter> getCharacterList(){
+		return characterList;
 	}
 	
 	public void cleanse() {

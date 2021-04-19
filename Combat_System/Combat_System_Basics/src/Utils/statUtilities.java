@@ -1,6 +1,6 @@
 package Utils;
 
-import main.character.TrudvangCharacter;
+import characterEssentials.TrudvangCharacter;
 
 /*
  * Most functions modifying a combat or civil skill check
@@ -12,7 +12,7 @@ public class statUtilities {
 
 	public int calculateInitiative(TrudvangCharacter character) {
 		int initiative = 0;
-		initiative = (int) Math.random()*10 + character.statMap.get("initialModifier") -1;
+		initiative = (int) Math.random()*10 + character.getStatMap().get("initialModifier") -1;
 		return initiative;
 	}
 }

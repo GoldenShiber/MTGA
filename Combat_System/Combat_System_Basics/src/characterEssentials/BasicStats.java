@@ -1,4 +1,4 @@
-package main.character;
+package characterEssentials;
 
 /*
  * The basic stats is what every stat need, simple a base

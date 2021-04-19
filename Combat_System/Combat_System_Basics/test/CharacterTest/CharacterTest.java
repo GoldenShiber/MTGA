@@ -1,10 +1,6 @@
 package CharacterTest;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.HashMap;
-
-
-import main.character.TrudvangCharacter;
 
 import org.junit.jupiter.api.Test;
 
