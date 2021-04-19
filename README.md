@@ -1,5 +1,5 @@
 # MTGA
-#MakeTrudvangGreatAgain
+#MakeTrudvangGreatAmazing
 
 The purpose of this project is make an easy to use combat system for 
 Drakar och Demoner Trudvang. The initial prototype is simply allowing 
